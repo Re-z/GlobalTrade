@@ -1,0 +1,160 @@
+@font-face {
+  font-family: 'HelveticaNeueCyr-Roman';
+  src: url('../fonts/HelveticaNeueCyr-Roman.eot?#iefix') format('embedded-opentype'),  url('../fonts/HelveticaNeueCyr-Roman.otf')  format('opentype'),
+  url('../fonts/HelveticaNeueCyr-Roman.woff') format('woff'), url('../fonts/HelveticaNeueCyr-Roman.ttf')  format('truetype'), url('../fonts/HelveticaNeueCyr-Roman.svg#HelveticaNeueCyr-Roman') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HelveticaNeueCyr-Light';
+  src: url('../fonts/HelveticaNeueCyr-Light.eot?#iefix') format('embedded-opentype'),  url('../fonts/HelveticaNeueCyr-Light.otf')  format('opentype'),
+  url('../fonts/HelveticaNeueCyr-Light.woff') format('woff'), url('../fonts/HelveticaNeueCyr-Light.ttf')  format('truetype'), url('../fonts/HelveticaNeueCyr-Light.svg#HelveticaNeueCyr-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+//vars
+$color1: #5B5F5E;
+$color2: #F58220;
+$color3: #ffffff;
+//mixins
+@mixin font1 {
+  font-family: 'HelveticaNeueCyr-Roman', serif;
+}
+@mixin font2 {
+  font-family: 'HelveticaNeueCyr-Light', serif;
+}
+@mixin font3 {
+  font-family: 'PT Serif Caption', serif;
+}
+
+
+.header {
+  background: $color3;
+  &__inner {
+    max-width: 1600px;
+    min-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+    &:after {
+      clear: both;
+      display: table;
+      content:"";
+    }
+  }
+  &__logo {
+    width: 275px;
+    height: 60px;
+    background: url('../img/logo_main.png');
+    margin-left: 50px;
+    float: left;
+  }
+}
+.navigation {
+  float: right;
+  margin-top: 3px;
+  margin-right: 20px;
+  &__list {
+    list-style: none;
+  }
+  &__item {
+    display: inline;
+  }
+  &__link {
+    @include font2;
+    font-size: 18px;
+    color: $color1;
+    text-decoration: none;
+    padding: 0 20px;
+    transition: .5s;
+    &:hover {
+      color: $color2;
+    }
+  }
+}
+.authorization {
+  float: right;
+  margin-top: 21px;
+  margin-right: 43px;
+  &__partnership {
+    color: $color3;
+    padding: 10px 15px;
+    border-radius: 3px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: linear-gradient(to bottom, #FAA61A 0%, #F47620 100%);
+    &:hover {
+      background: linear-gradient(to top, #FAA61A 0%, #F47620 100%);
+    }
+  }
+  &__login {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 5px 10px 5px;
+    margin-left: 22px;
+    background: none;
+    color: $color1;
+    &:hover {
+      @extend .navigation__link:hover;
+    }
+  }
+}
+.fa-angle-right {
+  margin-left: 5px;
+}
+.intro {
+  background: url("../img/bg1.jpg") repeat;
+  border-bottom: 15px solid #231F20;
+  &__inner {
+    margin: 0 auto;
+    width: 1200px;
+    padding-top: 23px;
+
+  }
+  &__title {
+    @include font3;
+    font-size: 36px;
+    text-transform: uppercase;
+    color: $color2;
+    margin: 0;
+    text-align: center;
+    letter-spacing: 0.4px;
+    font-weight: 100;
+    margin-bottom: 8px;
+    &-span {
+      color: $color3;
+    }
+  }
+  &__clients {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__img-wrap {
+    position: relative;
+  }
+  &__img {
+    width: 399px;
+    height: 208px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    filter: grayscale(1) brightness(50%);
+    z-index: -1;
+    &:hover {
+      filter: none;
+    }
+  }
+  &__text {
+    @include font3;
+    font-size: 21px;
+    color: $color3;
+    text-align: right;
+    margin-bottom: 14px;
+    margin-right: 10px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+  }
+}
