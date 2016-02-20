@@ -67,7 +67,7 @@
     background: none;
     color: #5B5F5E; }
 
-.fa-angle-right {
+.authorization__login .fa-angle-right {
   margin-left: 5px; }
 
 .intro {
@@ -111,8 +111,7 @@
     -ms-flex-align: end;
     align-items: flex-end;
     -webkit-filter: grayscale(1) brightness(50%);
-    filter: grayscale(1) brightness(50%);
-    z-index: -1; }
+    filter: grayscale(1) brightness(50%); }
     .intro__img:hover {
       -webkit-filter: none;
       filter: none; }
@@ -126,3 +125,92 @@
     position: absolute;
     bottom: 0;
     right: 0; }
+
+.offers {
+  background: #828281; }
+  .offers__inner {
+    margin: 0 auto;
+    width: 1200px;
+    padding-bottom: 15px; }
+  .offers__content-wrap {
+    width: 1050px;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-left: 20px; }
+  .offers__for-clients, .offers__for-suppliers {
+    width: 500px;
+    height: 370px;
+    display: inline-block;
+    font-size: 0;
+    position: relative;
+    background: url("../img/clients.jpg"); }
+    .offers__for-clients-inner, .offers__for-suppliers-inner {
+      width: 470px;
+      height: 218px;
+      position: absolute;
+      top: 50%;
+      margin-top: -109px;
+      left: -70px;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 26px 70px;
+      text-align: center;
+      box-sizing: border-box; }
+      .offers__for-clients-inner:before, .offers__for-suppliers-inner:before {
+        content: '';
+        display: block;
+        border: 35px solid transparent;
+        border-right-color: rgba(255, 255, 255, 0.8);
+        position: absolute;
+        left: -70px;
+        top: 73px; }
+  .offers__title {
+    margin: 0;
+    color: #5B5F5E;
+    font-size: 25px;
+    font-family: 'PT Serif Caption', serif;
+    text-transform: uppercase;
+    font-weight: 600; }
+    .offers__title-span {
+      color: #231F20; }
+  .offers__text {
+    color: #231F20;
+    font-family: 'HelveticaNeueCyr-Light', serif;
+    text-align: center;
+    margin-top: 12px;
+    font-size: 18px;
+    font-weight: 600; }
+  .offers__link {
+    text-decoration: none;
+    color: #ffffff;
+    width: 245px;
+    height: 40px;
+    display: block;
+    margin: 30px auto;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 3px;
+    font-size: 18px;
+    line-height: 40px;
+    background: linear-gradient(to bottom, #FAA61A 0%, #F47620 100%); }
+    .offers__link:hover {
+      background: linear-gradient(to top, #FAA61A 0%, #F47620 100%); }
+  .offers__for-suppliers {
+    background: url("../img/suppliers.jpg");
+    margin-left: 26px; }
+  .offers__for-suppliers-inner {
+    left: 113px; }
+    .offers__for-suppliers-inner:before {
+      content: '';
+      display: block;
+      border: 35px solid transparent;
+      border-left-color: rgba(255, 255, 255, 0.8);
+      position: absolute;
+      left: 470px; }
+
+.offers__link .fa-long-arrow-left {
+  position: relative;
+  right: 8px; }
+
+.offers__link .fa-long-arrow-right {
+  position: relative;
+  left: 8px; }
