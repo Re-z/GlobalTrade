@@ -124,6 +124,7 @@ $almostBlack: #231F20;
     letter-spacing: 0.4px;
     font-weight: 100;
     margin-bottom: 8px;
+    transition: .4s;
     &-span {
       color: $color3;
     }
@@ -263,3 +264,102 @@ $almostBlack: #231F20;
   position: relative;
   left: 8px;
 }
+.why-us {
+  height: 600px;//mbd
+  &__inner {
+    width: 1200px;
+    margin: 0 auto;
+    outline: 1px solid red;
+    padding-top: 58px;
+
+  }
+  &__title {
+    color: $almostBlack;
+    font-size: 30px;
+    line-height: 37px;
+    @include font3;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
+    &-span {
+      color: $color1;
+    }
+  }
+  &__text {
+    @include font2;
+    color: $almostBlack;
+    text-align: center;
+    margin-top: 27px;
+    line-height: 25px;
+    font-size: 18px;
+    font-weight: 600;
+    padding-bottom: 32px;
+    &-span {
+      color: $color1;
+    }
+  }
+  &__articles-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__article {
+    width: 370px;
+    height: 200px;
+    float: left;
+    margin-bottom: 75px;
+    box-sizing: border-box;
+    &:first-of-type, &:nth-of-type(4) {
+      padding-left: 15px;
+    }
+    &:nth-of-type(2), &:nth-of-type(5) {
+       padding: 8px 40px 0 8px;
+     }
+    &:nth-of-type(3), &:nth-of-type(6) {
+      padding: 7px 20px 0 4px;
+    }
+
+
+    &-header {
+      width: 270px;//for hover
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      cursor: pointer;
+
+    }
+
+    &-logo {
+      width: 100px;
+      height: 104px;
+      &_shop {background: url("../img/shop.png");}
+      &_approach {background: url("../img/approach.png")}
+      &_quality {background: url("../img/quality.png")}
+      &_compliance {background: url("../img/compliance.png")}
+      &_diversity {background: url("../img/diversity.png")}
+      &_process {
+        width: 108px;
+        background: url("../img/process.png")
+      }
+    }
+    &-title {
+      text-align: left;
+      @include font3;
+      font-size: 21px;
+      position: relative;
+      left: 20px;
+      top: -2px;
+      border-left: 2px solid $offersBkg;
+      padding-left: 20px;
+
+    }
+    &-text {
+      @include font2;
+    line-height: 23px;
+    }
+  }
+}
+
+
+

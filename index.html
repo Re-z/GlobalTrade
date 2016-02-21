@@ -80,14 +80,84 @@
                         <a class="offers__link" href="javascript:void(0)">become a supplier<i class="fa fa-long-arrow-right"></i></a>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
+    <section class="why-us">
+        <div class="why-us__inner">
+            <h2 class="why-us__title">we provide only best furniture solutions. <br/> <span class="why-us__title-span">yours wellfare</span> is our main goal!</h2>
+
+            <p class="why-us__text">We do not just strive to sell the furniture, we like to enjoy the <span class="why-us__text-span">process of working
+                with out partners —</span><br>and those are factories, retail chain of stores, hotels, schools, restaurants and
+                individuals. We hope that many of you <br/> will soon appreciate the <span class="why-us__text-span">excellence and professionalism </span>of Global
+                Trade Furniture Team!</p>
+            <div class="why-us__articles-wrap">
+                <article class="why-us__article">
+                    <header id="shop" class="why-us__article-header">
+                        <div class="why-us__article-logo why-us__article-logo_shop"></div>
+                        <h4 class="why-us__article-title">One Stop <br/> Shop</h4>
+                    </header>
+                    <p class="why-us__article-text">We provide state of the Art and wide collection of furniture which indulge form the luxury Vintage, Classic and Contemporary to Sophistication style</p>
+                </article>
+                <article class="why-us__article">
+                    <header class="why-us__article-header">
+                        <div class="why-us__article-logo why-us__article-logo_quality"></div>
+                        <h4 class="why-us__article-title">Quality</h4>
+                    </header>
+                    <p class="why-us__article-text">Our product is the soul epitome quality in terms of Sustainability, Health, Safetyand Versatile</p>
+
+                </article>
+                <article class="why-us__article">
+                    <header class="why-us__article-header">
+                        <div class="why-us__article-logo why-us__article-logo_diversity"></div>
+                        <h4 class="why-us__article-title">Diversity</h4>
+                    </header>
+                    <p class="why-us__article-text">Diversity is unity of our Pricing, Countries Product, Design, Originality and Innovation, Style and Size of your project</p>
+
+                </article>
+                <article class="why-us__article">
+                    <header class="why-us__article-header">
+                        <div class="why-us__article-logo why-us__article-logo_approach"></div>
+                        <h4 class="why-us__article-title">Our <br/> approach</h4>
+                    </header>
+                    <p class="why-us__article-text">Our customer is the heart of our business. <br/> We believe in Transparency, Commitmentand Accessibility</p>
+
+                </article>
+                <article class="why-us__article">
+                    <header class="why-us__article-header">
+                        <div class="why-us__article-logo why-us__article-logo_compliance"></div>
+                        <h4 class="why-us__article-title">Compliance</h4>
+                    </header>
+                    <p class="why-us__article-text">We have unlimited ideas with turkney solutions where we bring Ready to Custom madeand customize according to your budget</p>
+
+                </article>
+                <article class="why-us__article">
+                    <header class="why-us__article-header">
+                        <div class="why-us__article-logo why-us__article-logo_process"></div>
+                        <h4 class="why-us__article-title">Process</h4>
+                    </header>
+                    <p class="why-us__article-text">From the time you choose GTF you relax, we provide an integrated service consideringthe Time frame, Packaging and Delivery</p>
+                </article>
+            </div>
+
+
+        </div>
+    </section>
 </main>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.why-us__article-header').hover(function(){
+            $(this).find('h4').animate({paddingTop: '25',
+                                        paddingBottom: '25'}).css('color', '#F58220');
+        }, function(){
+            $(this).find('h4').animate({paddingTop: '0',
+                                        paddingBottom: '0'}).css('color','#231F20');
+        })
+    });
 
+</script>
 
-<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>-->
 <script src="js/index.js"></script>
 </body>
 </html>
