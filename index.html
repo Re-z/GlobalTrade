@@ -158,7 +158,10 @@
                 <p class="feedback__coordinates-email">To place an advertisement on our website, please,
                     <br/> mail to <a class="feedback__coordinates-link" href="javascript:void(0)">marketing@globaltradefurniture.com</a>
                 </p>
-                <div id="feedback__map"> </div>
+                <div class="map-wrap map-wrap_small">
+                    <p class="map-text map-text_expand">expand map <i class="fa fa-angle-up"></i></p>
+                    <div id="map" class="map_small"></div>
+                </div>
             </div>
             <div class="feedback__form-wrap">
                 <form class="feedback__form" action="">
@@ -177,6 +180,34 @@
             <a class="partnership__link">send a request</a>
         </div>
     </section>
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__logo-wrap">
+                <div class="footer__logo" role="banner"></div>
+                <p class="copyrights">© 2015. Global Trade Furniture, Ltd.</p>
+            </div>
+            <nav class="footer__navigation">
+                <ul class="footer__list">
+                    <li class="footer__navigation-item"><a class="footer__navigation-link" href="javascript:void(0)">About</a></li>
+                    <li class="footer__navigation-item"><a class="footer__navigation-link" href="javascript:void(0)">Projects</a></li>
+                    <li class="footer__navigation-item"><a class="footer__navigation-link" href="javascript:void(0)">Contacts</a></li>
+                </ul>
+                <a class="footer__partnership" href="javascript:void(0)">partnership</a>
+            </nav>
+            <div class="contacts">
+                <p class="contacts__email">
+                    For any additional information, please, <br/>
+                    email to <a class="contacts__email-link" href="">info@globaltradefurniture.com</a>
+                </p>
+                <p class="contacts__text">stay <br/> connected:</p>
+                <div class="contacts__socials">
+                    <div class="contacts__socials-btn contacts__socials-btn_fb" role="button"></div>
+                    <div class="contacts__socials-btn contacts__socials-btn_twit" role="button"></div>
+                    <div class="contacts__socials-btn contacts__socials-btn_inst" role="button"></div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </main>
 
 
@@ -196,15 +227,27 @@
         }, function(){
             $(this).find('h4').animate({paddingTop: '0',
                                         paddingBottom: '0'}).css('color','#231F20');
-        })
+        });
+        //map resize
+        $('.map-text').click(function(){
+            if($('.map-wrap').hasClass('map-wrap_small')&& $('#map').hasClass('map_small')) {
+                $('.map-wrap').animate({marginTop: '-324px'}, 1000).addClass('map-wrap_big');
+                $('#map').animate({height: '500px'}, 1000).addClass('map_big');
+                $('.map-text').html('<p class="map-text">collapse map <i class="fa fa-angle-down"></i></p>').addClass('map-text_collapse');
+            }
+            else {
+                alert('hyi tebe a ne js')
+            }
+        });
     });
 </script>
 <script>
+    //google map init
     function initMap() {
         var myLatLng = {lat: 34.04924594193164, lng: -118.24104309082031};
 
-        var map = new google.maps.Map(document.getElementById('feedback__map'), {
-            zoom: 18,
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 17,
             center: myLatLng
         });
 
