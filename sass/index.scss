@@ -14,12 +14,14 @@
 }
 
 
+
 //vars
 $color1: #5B5F5E;
 $color2: #F58220;
 $color3: #ffffff;
 $offersBkg: #828281;
 $almostBlack: #231F20;
+$footerLight: #ADAEAE;
 //mixins
 @mixin font1 {
   font-family: 'HelveticaNeueCyr-Roman', serif;
@@ -85,6 +87,7 @@ $almostBlack: #231F20;
     border-radius: 3px;
     text-decoration: none;
     text-transform: uppercase;
+    cursor: pointer;
     background: linear-gradient(to bottom, #FAA61A 0%, #F47620 100%);
     &:hover {
       background: linear-gradient(to top, #FAA61A 0%, #F47620 100%);
@@ -265,12 +268,11 @@ $almostBlack: #231F20;
   left: 8px;
 }
 .why-us {
-  height: 600px;//mbd
   &__inner {
     width: 1200px;
     margin: 0 auto;
-    outline: 1px solid red;
     padding-top: 58px;
+    padding-bottom: 75px;
 
   }
   &__title {
@@ -329,7 +331,6 @@ $almostBlack: #231F20;
       cursor: pointer;
 
     }
-
     &-logo {
       width: 100px;
       height: 104px;
@@ -352,7 +353,6 @@ $almostBlack: #231F20;
       top: -2px;
       border-left: 2px solid $offersBkg;
       padding-left: 20px;
-
     }
     &-text {
       @include font2;
@@ -360,6 +360,172 @@ $almostBlack: #231F20;
     }
   }
 }
+.feedback {
+  background: url("../img/bg2.jpg") repeat;
+  &__inner {
+    padding-bottom: 70px;
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 52px;
+    &:after {
+      display: table;
+      clear: both;
+      content: "";
+    }
+  }
+  &__title {
+    margin: 0;
+    text-align: center;
+    @include font3;
+    color: $footerLight;
+    font-size: 30px;
+    text-transform: uppercase;
+  }
+  &__intro-text {
+    color: $color3;
+    @include font2;
+    text-align: center;
+    font-size: 18px;
+    margin: 27px 0 45px 0;
+  }
+  &__coordinates {
+    width: 51%;
+    float: left;
+    padding-left: 16px;
+    box-sizing: border-box;
 
+    &-title {
+      margin: 0 0 5px 0;
+      color: $footerLight;
+      font-size: 16px;
+      @include font3;
+    }
+    &-text {
+      @include font2;
+      color: $color3;
+      font-size: 18px;
+      margin: 0 0 3px 0;
+      &-span {
+        @include font3;
+        color: $footerLight;
+        font-size: 16px;
+      }
+      &_tel {
+        margin-top: 30px;
+      }
+    }
+    &-email {
+      color: $footerLight;
+      @include font3;
+      font-size: 16px;
+      margin-top: 26px;
+    }
+    &-link {
+      color: $color3;
+      letter-spacing: -0.7px;
+      &:hover {
+        color: $color2;
+      }
+    }
+  }
+  &__form-wrap {
+    float: left;
+    width: 49%;
+    padding: 3px 17px 0 102px;
+    box-sizing: border-box;
+  }
+  &__form {
+    :after {
+      display: table;
+      clear: both;
+      content: "";
+    }
+    &-textarea {
+      resize: none;
+      width: 100%;
+      height: 290px;
+      padding-left: 15px;
+      padding-top: 15px;
+      box-sizing: border-box;
+    }
+    &-email {
+      width: 100%;
+      height: 52px;
+      margin-top: 10px;
+      padding-left: 15px;
+      box-sizing: border-box;
+    }
+    &-inputtext {
+      @extend .feedback__form-email;
+      margin: 13px 0 35px 0;
+    }
+    &-submit {
+      @include font2;
+      color: $color3;
+      text-transform: uppercase;
+      border: 1px solid $color3;
+      padding: 15px 31px;
+      font-size: 18px;
+      background: transparent;
+      border-radius: 3px;
+      float: left;
+      &:focus {
+        outline: none;
+      }
+    }
+    &-text {
+      @include font2;
+      color: $footerLight;
+      padding-top: 80px;
+      position: relative;
+      top: 22px;
+      font-size: 16px;
+      left: 31px;
+    }
+  }
+}
+#feedback__map {
+  height: 175px;
+  margin-top: 30px;
+}
+.partnership {
+  height: 410px;
+  outline: 1px solid red;
+  background: url("../img/hands.png") 0 -260px black;
+  &__inner {
+    height: inherit;
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 107px;
+  }
+  &__title {
+    margin: 0;
+    @include font3;
+    color: $color3;
+    font-size: 26px;
+    font-weight: 100;
+    text-align: center;
+    line-height: 41px;
+  }
+  &__link{
+    display: block;
+    width: 230px;
+    height: 60px;
+    margin: 45px auto;
+    cursor: pointer;
+    color: $color3;
+    @include font1;
+    font-size: 18px;
+    line-height: 60px;
+    border-radius: 3px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: linear-gradient(to bottom, #FAA61A 0%, #F47620 100%);
+    text-align: center;
 
+    &:hover {
+      background: linear-gradient(to top, #FAA61A 0%, #F47620 100%);
+    }
+  }
+}
 

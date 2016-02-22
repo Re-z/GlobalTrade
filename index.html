@@ -139,13 +139,56 @@
                     <p class="why-us__article-text">From the time you choose GTF you relax, we provide an integrated service consideringthe Time frame, Packaging and Delivery</p>
                 </article>
             </div>
-
-
+        </div>
+    </section>
+    <section class="feedback">
+        <div class="feedback__inner">
+            <h5 class="feedback__title">contact us</h5>
+            <p class="feedback__intro-text">We'd love to hear about Your project and help You to get started!</p>
+            <div class="feedback__coordinates">
+                <p class="feedback__coordinates-title">Corporate Headquarters:</p>
+                <p class="feedback__coordinates-text">1704, Fortune Tower</p>
+                <p class="feedback__coordinates-text">JLT, Cluster C</p>
+                <p class="feedback__coordinates-text">Dubai, UAE</p>
+                <p class="feedback__coordinates-text">PO Box: 634287</p>
+                <p class="feedback__coordinates-text feedback__coordinates-text_tel"><span class="feedback__coordinates-text-span">Phone number:</span> +971 4 558 46 38</p>
+                <p class="feedback__coordinates-email">For any additional information, please,
+                    <br/> email to <a class="feedback__coordinates-link" href="javascript:void(0)">info@globaltradefurniture.com</a>
+                </p>
+                <p class="feedback__coordinates-email">To place an advertisement on our website, please,
+                    <br/> mail to <a class="feedback__coordinates-link" href="javascript:void(0)">marketing@globaltradefurniture.com</a>
+                </p>
+                <div id="feedback__map"> </div>
+            </div>
+            <div class="feedback__form-wrap">
+                <form class="feedback__form" action="">
+                    <textarea name="message-text" id="feedback__form-textarea" class="feedback__form-textarea" cols="30" rows="10" placeholder="Tell us about your project"></textarea>
+                    <input type="email" class="feedback__form-email" placeholder="mymail@"/>
+                    <input type="text" class="feedback__form-inputtext" placeholder="Name (optionally)"/>
+                    <input type="submit" class="feedback__form-submit" value="send message"/>
+                    <span class="feedback__form-text">We will answer within 24 hours</span>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="partnership">
+        <div class="partnership__inner">
+            <h4 class="partnership__title">Dear Sirs,<br/> Do You Want to Become Our Partner?</h4>
+            <a class="partnership__link">send a request</a>
         </div>
     </section>
 </main>
+
+
+
+
+
+
+
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script>
+    //animating articles height on hower
     $(document).ready(function(){
         $('.why-us__article-header').hover(function(){
             $(this).find('h4').animate({paddingTop: '25',
@@ -155,9 +198,25 @@
                                         paddingBottom: '0'}).css('color','#231F20');
         })
     });
-
 </script>
+<script>
+    function initMap() {
+        var myLatLng = {lat: 34.04924594193164, lng: -118.24104309082031};
 
+        var map = new google.maps.Map(document.getElementById('feedback__map'), {
+            zoom: 18,
+            center: myLatLng
+        });
+
+        var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: 'Hello World!'
+        });
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+        async defer></script>
 <script src="js/index.js"></script>
 </body>
 </html>
