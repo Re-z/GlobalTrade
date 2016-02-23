@@ -23,6 +23,7 @@ $offersBkg: #828281;
 $almostBlack: #231F20;
 $footerLight: #ADAEAE;
 $footerBkg: #5B5F62;
+
 //mixins
 @mixin font1 {
   font-family: 'HelveticaNeueCyr-Roman', serif;
@@ -33,10 +34,19 @@ $footerBkg: #5B5F62;
 @mixin font3 {
   font-family: 'PT Serif Caption', serif;
 }
-
-
+//devices fix
+html {
+  overflow-x: hidden;
+}
+//devices fix
+body {
+  overflow-x: hidden;
+  min-width: 1200px;
+}
+//start header
 .header {
   background: $color3;
+  min-width: 1200px;
   &__inner {
     max-width: 1600px;
     min-width: 1200px;
@@ -56,6 +66,7 @@ $footerBkg: #5B5F62;
     float: left;
   }
 }
+
 .navigation {
   float: right;
   margin-top: 3px;
@@ -109,9 +120,12 @@ $footerBkg: #5B5F62;
 .authorization__login .fa-angle-right {
   margin-left: 5px;
 }
+//finish header, start intro
 .intro {
   background: url("../img/bg1.jpg") repeat;
   border-bottom: 15px solid #231F20;
+  min-width: 1200px;
+
   &__inner {
     margin: 0 auto;
     width: 1200px;
@@ -141,6 +155,7 @@ $footerBkg: #5B5F62;
     position: relative;
   }
   &__img {
+    transition: 1s;
     width: 399px;
     height: 208px;
     display: flex;
@@ -163,7 +178,9 @@ $footerBkg: #5B5F62;
     right: 0;
   }
 }
+//finish intro, start offers
 .offers{
+  min-width: 1200px;
   background:$offersBkg;
   &__inner {
     margin: 0 auto;
@@ -189,7 +206,7 @@ $footerBkg: #5B5F62;
       position: absolute;
       top: 50%;
       margin-top: -109px;
-      left: -70px;
+      left: -60px;
       background: rgba(255, 255, 255, 0.8);
       padding: 26px 70px;
       text-align: center;
@@ -255,9 +272,8 @@ $footerBkg: #5B5F62;
       border-left: 25px solid rgba(255, 255, 255, 0.8);
       position: absolute;
       left: 470px;
-
     }
-    left: 113px;
+    left: 87px;
   }
 }
 .offers__link .fa-long-arrow-left {
@@ -268,7 +284,9 @@ $footerBkg: #5B5F62;
   position: relative;
   left: 8px;
 }
+//finish offer, start why-us
 .why-us {
+  min-width: 1200px;
   &__inner {
     width: 1200px;
     margin: 0 auto;
@@ -323,7 +341,6 @@ $footerBkg: #5B5F62;
       padding: 7px 20px 0 4px;
     }
 
-
     &-header {
       width: 270px;//for hover
       display: flex;
@@ -335,14 +352,15 @@ $footerBkg: #5B5F62;
     &-logo {
       width: 100px;
       height: 104px;
-      &_shop {background: url("../img/shop.png");}
-      &_approach {background: url("../img/approach.png")}
-      &_quality {background: url("../img/quality.png")}
-      &_compliance {background: url("../img/compliance.png")}
-      &_diversity {background: url("../img/diversity.png")}
+      background: url("../img/sprite.png");
+      &_shop {background-position: -20px -729px}
+      &_approach {background-position: -20px -234px}
+      &_quality {background-position: -20px -605px;}
+      &_compliance {background-position: -20px -357px}
+      &_diversity {background-position: -20px -481px}
       &_process {
         width: 108px;
-        background: url("../img/process.png")
+        background-position: -20px -111px;
       }
     }
     &-title {
@@ -361,10 +379,12 @@ $footerBkg: #5B5F62;
     }
   }
 }
+//finish why us start feedback
 .feedback {
+  min-width: 1200px;
   background: url("../img/bg2.jpg") repeat;
   &__inner {
-    padding-bottom: 70px;
+    height: 717px;
     width: 1200px;
     margin: 0 auto;
     padding-top: 52px;
@@ -390,7 +410,6 @@ $footerBkg: #5B5F62;
     margin: 27px 0 45px 0;
   }
   &__coordinates {
-    outline: 1px solid blue;
     width: 51%;
     float: left;
     padding-left: 16px;
@@ -475,6 +494,10 @@ $footerBkg: #5B5F62;
       &:focus {
         outline: none;
       }
+      &:hover {
+        background: $color3;
+        color: $color1;
+      }
     }
     &-text {
       @include font2;
@@ -490,10 +513,8 @@ $footerBkg: #5B5F62;
 }
 .map {
   &-wrap {
-    width: 600px;
-    outline: 1px solid red;
-    margin-top: 15px;
-    position: absolute;
+    margin-top: 30px;
+    position: relative;
   }
   &-text {
     line-height: 26px;
@@ -514,13 +535,14 @@ $footerBkg: #5B5F62;
 #map {
   height: 175px;
 }
-
 .partnership {
+  min-width: 1200px;
   height: 410px;
-  background: url("../img/hands.png") 130px -260px black;
+  background: url("../img/hands.png") center black;
   &__inner {
     height: inherit;
-    width: 1600px;
+    min-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
     padding-top: 107px;
   }
@@ -550,12 +572,12 @@ $footerBkg: #5B5F62;
     text-align: center;
     position: relative;
     z-index: 100;
-
     &:hover {
       background: linear-gradient(to top, #FAA61A 0%, #F47620 100%);
     }
   }
 }
+//finish feedback, start footer
 .footer {
   background: $footerBkg;
   position: relative;
@@ -572,20 +594,17 @@ $footerBkg: #5B5F62;
   }
   &__inner {
     padding-bottom: 40px;
-    width: 1600px;
+    min-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
     padding-left: 50px;
     padding-top: 65px;
     padding-right: 50px;
     box-sizing: border-box;
-    &:after {
-      clear: both;
-      display: table;
-      content: "";
-    }
+    display: flex;
+    justify-content: space-between;
   }
   &__logo-wrap {
-    float: left;
   }
   &__logo {
     background: url("../img/logo_footer.png");
@@ -593,11 +612,10 @@ $footerBkg: #5B5F62;
     width: 319px;
   }
   &__navigation {
-    margin-left: 170px;
     margin-top: 21px;
-    float: left;
     position: relative;
     z-index: 100;
+    margin-left: -80px;
     &-item {
       display: inline;
     }
@@ -646,7 +664,6 @@ $footerBkg: #5B5F62;
     clear: both;
     content: "";
   }
-  float: right;
   width: 300px;
   height: 110px;//mbd
   &__email {
