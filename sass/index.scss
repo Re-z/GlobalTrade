@@ -14,7 +14,6 @@
 }
 
 
-
 //vars
 $color1: #5B5F5E;
 $color2: #F58220;
@@ -34,15 +33,18 @@ $footerBkg: #5B5F62;
 @mixin font3 {
   font-family: 'PT Serif Caption', serif;
 }
+
 //devices fix
 html {
   overflow-x: hidden;
 }
+
 //devices fix
 body {
   overflow-x: hidden;
   min-width: 1200px;
 }
+
 //start header
 .header {
   background: $color3;
@@ -89,6 +91,7 @@ body {
     }
   }
 }
+
 .authorization {
   float: right;
   margin-top: 21px;
@@ -117,31 +120,30 @@ body {
     }
   }
 }
+
 .authorization__login .fa-angle-right {
   margin-left: 5px;
 }
+
 //finish header, start intro
 .intro {
   background: url("../img/bg1.jpg") repeat;
   border-bottom: 15px solid #231F20;
   min-width: 1200px;
-
   &__inner {
     margin: 0 auto;
     width: 1200px;
     padding-top: 23px;
-
   }
   &__title {
     @include font3;
     font-size: 36px;
     text-transform: uppercase;
     color: $color2;
-    margin: 0;
+    margin: 0 0 8px 0;
     text-align: center;
     letter-spacing: 0.4px;
     font-weight: 100;
-    margin-bottom: 8px;
     transition: .4s;
     &-span {
       color: $color3;
@@ -178,6 +180,7 @@ body {
     right: 0;
   }
 }
+
 //finish intro, start offers
 .offers{
   min-width: 1200px;
@@ -276,14 +279,17 @@ body {
     left: 87px;
   }
 }
+
 .offers__link .fa-long-arrow-left {
   position: relative;
   right: 8px;
 }
+
 .offers__link .fa-long-arrow-right {
   position: relative;
   left: 8px;
 }
+
 //finish offer, start why-us
 .why-us {
   min-width: 1200px;
@@ -379,6 +385,7 @@ body {
     }
   }
 }
+
 //finish why us start feedback
 .feedback {
   min-width: 1200px;
@@ -448,7 +455,6 @@ body {
         color: $color2;
       }
     }
-
   }
   &__form-wrap {
     float: left;
@@ -509,8 +515,8 @@ body {
       left: 31px;
     }
   }
-
 }
+
 .map {
   &-wrap {
     margin-top: 30px;
@@ -532,9 +538,8 @@ body {
     font-size: 14px;
   }
 }
-#map {
-  height: 175px;
-}
+#map {height: 175px;}
+
 .partnership {
   min-width: 1200px;
   height: 410px;
@@ -577,6 +582,7 @@ body {
     }
   }
 }
+
 //finish feedback, start footer
 .footer {
   background: $footerBkg;
@@ -604,8 +610,6 @@ body {
     display: flex;
     justify-content: space-between;
   }
-  &__logo-wrap {
-  }
   &__logo {
     background: url("../img/logo_footer.png");
     height: 66px;
@@ -624,7 +628,6 @@ body {
       color: $footerLight;
       text-decoration: none;
       padding: 0 17px;
-
       transition: .5s;
       &:hover {
         color: $color3;
@@ -651,6 +654,7 @@ body {
     display: inline-block;
   }
 }
+
 .copyrights {
   color: $footerLight;
   @include font2;
@@ -658,6 +662,7 @@ body {
   padding-top: 3px;
   padding-left: 2px
 }
+
 .contacts {
   &:after {
     display: table;

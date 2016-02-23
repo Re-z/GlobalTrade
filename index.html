@@ -8,7 +8,9 @@
     <link href='https://fonts.googleapis.com/css?family=PT+Serif+Caption' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
+
 <body>
+<!--start header-->
 <header class="header">
     <div class="header__inner">
         <div class="header__logo" role="banner"></div>
@@ -29,6 +31,7 @@
     </div>
 </header>
 <main>
+    <!--finished header, start intro-->
     <section class="intro">
         <div class="intro__inner">
             <h1 class="intro__title">b2b furniture solutions. <span class="intro__title-span">we work with:</span></h1>
@@ -63,6 +66,8 @@
             </div>
         </div>
     </section>
+
+    <!--finished intro, start offers-->
     <section class="offers">
         <div class="offers__inner">
             <div class="offers__content-wrap">
@@ -83,6 +88,8 @@
             </div>
         </div>
     </section>
+
+    <!--finished offers, start why-us-->
     <section class="why-us">
         <div class="why-us__inner">
             <h2 class="why-us__title">we provide only best furniture solutions. <br/> <span class="why-us__title-span">yours wellfare</span> is our main goal!</h2>
@@ -139,6 +146,8 @@
             </div>
         </div>
     </section>
+
+    <!--finished why-us, start feedback-->
     <section class="feedback">
         <div class="feedback__inner">
             <h5 class="feedback__title">contact us</h5>
@@ -159,7 +168,6 @@
                 <div class="map-wrap map-wrap_small">
                     <p class="map-text map-text_expand">expand map <i class="fa fa-angle-up"></i></p>
                     <iframe id="map" class="map_small" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14539.655649471757!2d54.49078146468739!3d24.349491270737463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0xbf4135b1ccb76336!2sAbu+Dhabi+Distribution+Company!5e0!3m2!1suk!2sua!4v1456213771615" width="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
-                    <!--<div id="map" class="map_small"></div>-->
                 </div>
             </div>
             <div class="feedback__form-wrap">
@@ -173,13 +181,18 @@
             </div>
         </div>
     </section>
+
+    <!--finished feedback, start partnership-->
     <section class="partnership">
         <div class="partnership__inner">
             <h4 class="partnership__title">Dear Sirs,<br/>Do You Want to Become Our Partner?</h4>
             <a class="partnership__link">send a request</a>
         </div>
     </section>
-    <footer class="footer">
+
+</main>
+    <!--finished partnership, start footer-->
+<footer class="footer">
         <div class="footer__inner">
             <div class="footer__logo-wrap">
                 <div class="footer__logo" role="banner"></div>
@@ -206,42 +219,10 @@
                 </div>
             </div>
         </div>
-    </footer>
-</main>
-
-
-
-
-
-
+</footer>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script>
-    //animating articles height on hower
-    $(document).ready(function(){
-        $('.why-us__article-header').hover(function(){
-            $(this).find('h4').animate({paddingTop: '25',
-                                        paddingBottom: '25'}).css('color', '#F58220');
-        }, function(){
-            $(this).find('h4').animate({paddingTop: '0',
-                                        paddingBottom: '0'}).css('color','#231F20');
-        });
-        //map resize
-        $('.map-text').click(function(){
-            if($('.map-wrap').hasClass('map-wrap_small')&& $('#map').hasClass('map_small')) {
-                $('.map-wrap').animate({marginTop: '-324px'}, 500).removeClass('map-wrap_small').addClass('map-wrap_big');
-                $('#map').animate({height: '510px'}, 500).removeClass('map_small').addClass('map_big');
-                $('.map-text').html('<p class="map-text">collapse map <i class="fa fa-angle-down"></i></p>');
-            }
-            else if ($('.map-wrap').hasClass('map-wrap_big')&& $('#map').hasClass('map_big')) {
-                $('.map-wrap').animate({marginTop: '30px'}, 500).removeClass('map-wrap_big').addClass('map-wrap_small');
-                $('#map').animate({height: '170px'}, 500).removeClass('map_big').addClass('map_small');
-                $('.map-text').html('<p class="map-text map-text_expand">expand map <i class="fa fa-angle-up"></i></p>');
-            }
-        });
-    });
-</script>
 <script>
     //google map init
     function initMap() {
@@ -255,12 +236,12 @@
         var marker = new google.maps.Marker({
             position: myLatLng,
             map: map,
-            title: 'Hello World!'
+            title: 'Here we are!'
         });
     }
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
-        async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
 <script src="js/index.js"></script>
 </body>
+
 </html>
